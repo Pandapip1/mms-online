@@ -23,15 +23,11 @@
   <body>
     <div id="app">
       <div v-if="!signedin" id="signin">
-        <b-card>
-          <b-card-body>
-            <b-card-title>Sign in</b-card-title>
-          </b-card-body>
-          <b-card-body>
-            <a href="#" class="card-link">Sign In</a>
-            <a href="privacy.html" class="card-link">Privacy Policy</a>
-          </b-card-body>
-          <b-card-footer>MMS Online is licenced under GPLv3. View the source code <a href="https://github.com/Pandapip1/mms-online">here</a>.</b-card-footer>
+        <b-card v-bind:bg-variant="darkmode ? 'dark' : 'light'" v-bind:text-variant="darkmode ? 'white' : 'black'" title="Sign In">
+          <b-card-text>
+            By signing in, you agree to the <a href="privacy.html">Privacy Policy</a>.
+          </b-card-text>
+          <b-button href="#" variant="primary">Sign In</b-button>
         </b-card>
       </div>
     </div>
