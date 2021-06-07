@@ -31,9 +31,7 @@
         </b-card>
       </div>
       <b-list-group>
-        <b-list-group-item button>(123) 456-7890</b-list-group-item>
-        <b-list-group-item button>(456) 789-0123</b-list-group-item>
-        <b-list-group-item button>(789) 012-3456</b-list-group-item>
+        <b-list-group-item button v-for="number in numbers">{{ (''+number).replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3') }}</b-list-group-item>
       </b-list-group>
     </div>
     <script src="js/main.js"></script>
