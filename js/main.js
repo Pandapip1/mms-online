@@ -1,7 +1,7 @@
 var app = new Vue({
   el: '#app',
   data: {
-    signedin: false,
+    signedin: true,
     darkmode: false,
     numbers: [
       '1234567890',
