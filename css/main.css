@@ -11,3 +11,8 @@ html body #app {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+#signin * {
+  width: 100%;
+  height: 100%;
+}
