@@ -1,6 +1,7 @@
 var app = new Vue({
   el: '#app',
   data: {
-    signedin: false
+    signedin: false,
+    darkmode: false
   }
 });
