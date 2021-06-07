@@ -4,9 +4,9 @@ html body #app {
 }
 
 #signin {
-  max-width: 75%;
+  min-width: 75%;
   max-height: 25%;
-  position:absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
