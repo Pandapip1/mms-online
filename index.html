@@ -22,7 +22,7 @@
   </head>
   <body>
     <div id="app">
-      <b-card>
+      <b-card v-if="!signedin" id="signin">
         <b-card-body>
           <b-card-title>Sign in</b-card-title>
           <b-card-text>
