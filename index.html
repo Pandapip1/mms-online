@@ -30,9 +30,11 @@
           <b-button href="#" variant="primary">Sign In</b-button>
         </b-card>
       </div>
-      <b-list-group>
-        <b-list-group-item button v-for="number in numbers">{{ (''+number).replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3') }}</b-list-group-item>
-      </b-list-group>
+      <div v-if="signedin" id="main">
+        <b-list-group style="max-width:0px;">
+          <b-list-group-item button v-for="number in numbers">{{ (''+number).replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3') }}</b-list-group-item>
+        </b-list-group>
+      </div>
     </div>
     <script src="js/main.js"></script>
   </body>
