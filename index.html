@@ -22,6 +22,7 @@
   </head>
   <body>
     <div id="app">
+      <b-button pill variant="primary" size="lg" style="position: absolute; top: .5em; right: .5em;">+</b-button>
       <div v-if="!signedin" id="signin">
         <b-card v-bind:bg-variant="darkmode ? 'dark' : 'light'" v-bind:text-variant="darkmode ? 'white' : 'black'" title="Sign In">
           <b-card-text>
