@@ -16,3 +16,16 @@ html body #app {
   width: 100%;
   height: 100%;
 }
+
+#phonenums {
+  min-width: 10%;
+  width: 0px;
+  white-space: nowrap;
+}
+
+#phonenums * {
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+}
