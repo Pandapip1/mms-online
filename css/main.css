@@ -41,6 +41,7 @@ html, body, #app {
   flex-grow: 2;
   height: 100%;
   max-height: 100vh;
+  flex-direction: column-reverse;
 }
 
 .message {
@@ -51,10 +52,10 @@ html, body, #app {
 .message * {
   display: inline-block !important;
   max-width: 50% !important;
-  padding-left: .1 !important;
-  padding-right: .1 !important;
-  padding-top: .1 !important;
-  padding-bottom: .1 !important;
+  padding-left: .1em !important;
+  padding-right: .1em !important;
+  padding-top: .1em !important;
+  padding-bottom: .1em !important;
 }
 
 .message * * * {
