@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- Metadata -->
-    <title></title>
+    <title>MMS Online | Text Messages Without a Phone</title>
     <link rel="manifest" href="/manifest.json">
     <!-- Custom CSS -->
     <link type="text/css" rel="stylesheet" href="css/main.css"/>
@@ -18,7 +18,7 @@
   </head>
   <body>
     <div id="app">
-      <b-button pill variant="primary" size="lg" style="position: absolute; top: .5em; right: .5em;" v-b-modal.modal-sendmessage>+</b-button>
+      <b-button pill variant="primary" size="lg" style="position: absolute; top: .5em; right: .5em; z-index: 1;" v-b-modal.modal-sendmessage>+</b-button>
       <b-modal id="modal-sendmessage" size="xl" title="Send A Message" modal-ok="Send" ok-variant="success" hide-header-close>
         <b-form-group
           description="Phone Number"
