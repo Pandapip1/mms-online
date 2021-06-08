@@ -23,10 +23,3 @@ html, body, #app {
   white-space: nowrap;
   text-align: center;
 }
-
-#phonenums * * {
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: .25em;
-  padding-bottom: .25em;
-}
