@@ -51,6 +51,10 @@ html, body, #app {
 .message * {
   display: inline-block !important;
   max-width: 50% !important;
+  padding-left: .1 !important;
+  padding-right: .1 !important;
+  padding-top: .1 !important;
+  padding-bottom: .1 !important;
 }
 
 .message * * * {
