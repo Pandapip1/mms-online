@@ -37,5 +37,6 @@ html, body, #app {
 }
 
 #messagearea {
-  flex-grow: 3;
+  width: 0px;
+  flex-grow: 2;
 }
