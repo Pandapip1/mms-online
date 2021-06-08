@@ -60,9 +60,6 @@ html, body, #app {
   padding-right: .1em !important;
   padding-top: .1em !important;
   padding-bottom: .1em !important;
-}
-
-.message * * {
   text-align: center !important;
 }
 
