@@ -23,7 +23,7 @@ html body #app {
   white-space: nowrap;
 }
 
-#phonenums * {
+#phonenums * * {
   padding-left: 1em;
   padding-right: 1em;
   padding-top: .25em;
