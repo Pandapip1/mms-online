@@ -25,13 +25,32 @@
       <b-button pill variant="primary" size="lg" style="position: absolute; top: .5em; right: .5em;" v-b-modal.modal-sendmessage>+</b-button>
       <b-modal id="modal-sendmessage" size="xl" title="Send A Message" modal-ok="Send" ok-variant="success" hide-header-close>
         <b-form-group
-          id="fieldset-1"
-          description="Let us know your name."
-          label="Enter your name"
-          label-for="input-1"
-          valid-feedback="Thank you!"
+          description="Phone Number"
+          label="To:"
+          label-for="phonenum-input"
         >
-          <b-form-input id="input-1" trim></b-form-input>
+          <b-form-input id="phonenum-input" trim></b-form-input>
+        </b-form-group>
+        <b-form-group
+          description="The Message to Send"
+          label="Message:"
+          label-for="message"
+        >
+          <b-form-textarea
+            id="message"
+            rows="3"
+            max-rows="8"
+          ></b-form-textarea>
+        </b-form-group>
+        <b-form-group
+          label="Attachment:"
+          label-for="attachment"
+        >
+          <b-form-file
+            id="attachment"
+            placeholder="Choose a file or drop it here..."
+            drop-placeholder="Drop file here..."
+          ></b-form-file>
         </b-form-group>
       </b-modal>
       <div v-if="!signedin" id="signin">
