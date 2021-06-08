@@ -19,10 +19,26 @@
 
     <!-- Load the following for BootstrapVueIcons support -->
     <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
+    
+    <!-- vue-tel-input -->
+    <script src="./dist/vue-phone-number-input.umd.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="./dist/vue-phone-number-input.css">
   </head>
   <body>
     <div id="app">
       <b-button pill variant="primary" size="lg" style="position: absolute; top: .5em; right: .5em;">+</b-button>
+      <b-modal id="modal-xl" size="xl" title="Send A Message">
+        <b-form-input
+          v-model="tel"
+          placeholder="Phone Number"
+          :state="nameState"
+        ></b-form-input>
+        <b-form-textarea
+          placeholder="Hello!"
+          rows="3"
+          max-rows="8"
+        ></b-form-textarea>
+      </b-modal>
       <div v-if="!signedin" id="signin">
         <b-card v-bind:bg-variant="darkmode ? 'dark' : 'light'" v-bind:text-variant="darkmode ? 'white' : 'black'" title="Sign In">
           <b-card-text>
