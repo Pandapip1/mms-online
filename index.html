@@ -25,26 +25,15 @@
       <b-button pill variant="primary" size="lg" style="position: absolute; top: .5em; right: .5em;" v-b-modal.modal-sendmessage>+</b-button>
       <b-modal id="modal-sendmessage" size="xl" title="Send A Message" modal-ok="Send" ok-variant="success" hide-header-close>
         <b-form-group
-          label-cols-sm="4"
-          label-cols-lg="3"
-          content-cols-sm
-          content-cols-lg="7"
-          description="Phone Number"
-          label="To: "
-          label-for="input-horizontal"
+          id="fieldset-1"
+          description="Let us know your name."
+          label="Enter your name"
+          label-for="input-1"
+          valid-feedback="Thank you!"
+          :invalid-feedback="invalidFeedback"
+          :state="state"
         >
-          <b-form-input id="input-horizontal"></b-form-input>
-        </b-form-group>
-        <b-form-group
-          label-cols-sm="4"
-          label-cols-lg="3"
-          content-cols-sm
-          content-cols-lg="7"
-          description="Hello!"
-          label="Message: "
-          label-for="input-horizontal"
-        >
-          <b-form-textarea rows="3" max-rows="8"></b-form-textarea>
+          <b-form-input id="input-1" v-model="name" :state="state" trim></b-form-input>
         </b-form-group>
       </b-modal>
       <div v-if="!signedin" id="signin">
