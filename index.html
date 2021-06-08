@@ -58,9 +58,14 @@
         </b-card>
       </div>
       <div v-if="signedin" id="main">
-        <b-list-group id="phonenums">
-          <b-list-group-item button v-for="number in numbers">{{ (''+number).replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3') }}</b-list-group-item>
-        </b-list-group>
+        <b-form-group label="Stacked button style radios" id="phonenums">
+          <b-form-radio-group
+            v-model="selected"
+            :options="numbers.map(number => {text: (''+number).replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3'), value: number})"
+            buttons
+            stacked
+          ></b-form-radio-group>
+        </b-form-group>
         <b-card
           border-variant="primary"
           header="Primary"
