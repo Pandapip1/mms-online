@@ -30,10 +30,8 @@
           label="Enter your name"
           label-for="input-1"
           valid-feedback="Thank you!"
-          :invalid-feedback="invalidFeedback"
-          :state="state"
         >
-          <b-form-input id="input-1" v-model="name" :state="state" trim></b-form-input>
+          <b-form-input id="input-1" trim></b-form-input>
         </b-form-group>
       </b-modal>
       <div v-if="!signedin" id="signin">
