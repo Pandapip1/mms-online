@@ -41,7 +41,11 @@ html, body, #app {
   flex-grow: 2;
   height: 100%;
   max-height: 100vh;
+}
+
+#messages {
   flex-direction: column-reverse;
+  overflow: scroll;
 }
 
 .message {
@@ -58,7 +62,7 @@ html, body, #app {
   padding-bottom: .1em !important;
 }
 
-.message * * * {
+.message * * {
   text-align: center !important;
 }
 
