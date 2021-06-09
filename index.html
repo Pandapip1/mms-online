@@ -44,7 +44,7 @@
         >
           <input type="file" id="attachsend" style="display: none;">
           <div id="messages">
-            <b-input-group>
+            <b-input-group style="flex: none;">
               <b-input-group-prepend>
                 <b-button variant="outline-secondary" onclick="document.getElementById('attachsend').click();">Attach File</b-button>
               </b-input-group-prepend>
@@ -53,6 +53,7 @@
                 <b-button variant="success">Send</b-button>
               </b-input-group-append>
             </b-input-group>
+            <div style="flex: 1;"></div>
             <div class="message my-message">
               <b-card bg-variant="primary" text-variant="white">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
