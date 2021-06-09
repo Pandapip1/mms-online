@@ -63,7 +63,7 @@
           id="messagearea"
           no-body
         >
-          <b-card-body id="messages">
+          <b-card-body id="messages" v-if="selectednum != '' && selectednum != 'new'">
             <b-input-group class="inflexible">
               <b-form-input></b-form-input>
               <b-input-group-append>
@@ -77,6 +77,9 @@
                 {{ message.content }}
               </b-card>
             </div>
+          </b-card-body>
+          <b-card-body v-if="selectednum == '' || selectednum == 'new'">
+            <p>Add a phone number to start</p>
           </b-card-body>
         </b-card>
       </div>
