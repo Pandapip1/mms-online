@@ -42,32 +42,28 @@
           align="center"
           id="messagearea"
         >
-          <b-card-body id="messageareabody" style="display:flex; flex-direction:column;">
-            <div id="messages" style="flex: 1; height: 100%; overflow-y: scroll; display: flex;">
-              <div class="message my-message">
-                <b-card bg-variant="primary" text-variant="white">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-                </b-card>
-              </div>
-              <div class="message their-message">
-                <b-card bg-variant="light" text-variant="black">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-                </b-card>
-              </div>
+          <input type="file" id="attachsend" style="display: none;">
+          <div id="messages">
+            <b-input-group>
+              <b-input-group-prepend>
+                <b-button variant="outline-secondary" onclick="document.getElementById('attachsend').click();">Attach File</b-button>
+              </b-input-group-prepend>
+              <b-form-input></b-form-input>
+              <b-input-group-append>
+                <b-button variant="success">Send</b-button>
+              </b-input-group-append>
+            </b-input-group>
+            <div class="message my-message">
+              <b-card bg-variant="primary" text-variant="white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+              </b-card>
             </div>
-            <div>
-              <input type="file" id="attachsend" style="display: none;">
-              <b-input-group>
-                <b-input-group-prepend>
-                  <b-button variant="outline-secondary" onclick="document.getElementById('attachsend').click();">Attach File</b-button>
-                </b-input-group-prepend>
-                <b-form-input></b-form-input>
-                <b-input-group-append>
-                  <b-button variant="success">Send</b-button>
-                </b-input-group-append>
-              </b-input-group>
+            <div class="message their-message">
+              <b-card bg-variant="light" text-variant="black">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+              </b-card>
             </div>
-          </b-card-body>
+          </div>
         </b-card>
       </div>
     </div>
