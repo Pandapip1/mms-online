@@ -54,7 +54,7 @@
             </b-input-group>
             <div style="flex-grow: 1; flex-basis: 0em;"></div>
             <div v-bind:class="message.mine ? 'message my-message' : 'message their-message'" v-for='message in messages'>
-              <b-card v-bind:bg-variant="message.mine ? 'primary' : 'light'" v-bind:text-variant="messgage.mine ? 'white' : 'black'">
+              <b-card v-bind:bg-variant="message.mine ? 'primary' : 'light'" v-bind:text-variant="message.mine ? 'white' : 'black'">
                 {{ message.content }}
               </b-card>
             </div>
