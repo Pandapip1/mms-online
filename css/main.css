@@ -43,15 +43,6 @@ html, body, #app {
   max-height: 100vh;
 }
 
-#messageareabody {
-  display: flex;
-  flex-direction: column;
-}
-
-#messageareabody * {
-  display: flex;
-}
-
 #messages {
   flex-direction: column-reverse;
   overflow: scroll;
@@ -60,6 +51,7 @@ html, body, #app {
 .message {
   padding-bottom: .25em !important;
   padding-top: .25em !important;
+  flex: none;
 }
 
 .message * {
