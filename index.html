@@ -27,7 +27,7 @@
         </b-card>
       </div>
       <div v-if="signedin" id="main">
-        <b-form-radio-group buttons stacked id="phonenums" button-variant="outline-primary" size="lg" style="flex-direction: column;">
+        <b-form-radio-group buttons stacked id="phonenums" button-variant="outline-success" size="sm" style="flex-direction: column;">
           <b-form-radio v-for="number in numbers" v-bind:value="number" style="flex-grow: 0;">
             {{ (''+number).replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3') }}
           </b-form-radio>
@@ -54,16 +54,18 @@
               </b-card>
             </div>
           </div>
-          <input type="file" id="attachsend" style="display: none;">
-          <b-input-group>
-            <b-input-group-prepend>
-              <b-button variant="outline-secondary" onclick="document.getElementById('attachsend').click();">Attach File</b-button>
-            </b-input-group-prepend>
-            <b-form-input></b-form-input>
-            <b-input-group-append>
-              <b-button variant="success">Send</b-button>
-            </b-input-group-append>
-          </b-input-group>
+          <div style="position: absolute; bottom: .5em;">
+            <input type="file" id="attachsend" style="display: none;">
+            <b-input-group>
+              <b-input-group-prepend>
+                <b-button variant="outline-secondary" onclick="document.getElementById('attachsend').click();">Attach File</b-button>
+              </b-input-group-prepend>
+              <b-form-input></b-form-input>
+              <b-input-group-append>
+                <b-button variant="success">Send</b-button>
+              </b-input-group-append>
+            </b-input-group>
+          </div>
         </b-card>
       </div>
     </div>
