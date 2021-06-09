@@ -45,24 +45,17 @@
           no-body
         >
           <b-card-body id="messages">
-            <b-input-group style="flex: none;">
-              <b-input-group-prepend>
-                <b-button variant="outline-secondary" onclick="document.getElementById('attachsend').click();">Attach File</b-button>
-              </b-input-group-prepend>
+            <b-input-group style="flex: none; position: sticky;">
               <b-form-input></b-form-input>
               <b-input-group-append>
+                <b-button variant="secondary" onclick="document.getElementById('attachsend').click();">Send File</b-button>
                 <b-button variant="success">Send</b-button>
               </b-input-group-append>
             </b-input-group>
-            <div style="flex: 1;"></div>
-            <div class="message my-message">
-              <b-card bg-variant="primary" text-variant="white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-              </b-card>
-            </div>
-            <div class="message their-message">
-              <b-card bg-variant="light" text-variant="black">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            <div style="flex-grow: 1; flex-basis: 0em;"></div>
+            <div v-bind:class="message.mine ? 'message my-message' : 'message their-message'" v-for='message in messages'>
+              <b-card v-bind:bg-variant="message.mine ? 'primary' : 'light'" v-bind:text-variant="messgage.mine ? 'white' : 'black'">
+                {{ message.content }}
               </b-card>
             </div>
           </b-card-body>
