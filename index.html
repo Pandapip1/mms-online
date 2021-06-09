@@ -34,6 +34,7 @@
           <b-form-radio value="new" style="min-height: 0em; flex-grow: 0;">New Contact</b-form-radio>
           <b-form-radio value="" style="min-height: 0em; flex-grow: 1;" disabled></b-form-radio>
         </b-form-radio-group>
+        <input type="file" id="attachsend" style="display: none;">
         <b-card
           border-variant="primary"
           header="Primary"
@@ -41,9 +42,9 @@
           header-text-variant="white"
           align="center"
           id="messagearea"
+          no-body
         >
-          <input type="file" id="attachsend" style="display: none;">
-          <div id="messages">
+          <b-card-body id="messages">
             <b-input-group style="flex: none;">
               <b-input-group-prepend>
                 <b-button variant="outline-secondary" onclick="document.getElementById('attachsend').click();">Attach File</b-button>
@@ -64,7 +65,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
               </b-card>
             </div>
-          </div>
+          </b-card-body>
         </b-card>
       </div>
     </div>
