@@ -5,8 +5,6 @@ html, body, #app {
 
 #main {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 #signin {
@@ -43,6 +41,8 @@ html, body, #app {
   flex-grow: 2;
   height: 100vh;
   max-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #messages {
