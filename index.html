@@ -26,18 +26,37 @@
           <b-button href="#" variant="primary">Sign In</b-button>
         </b-card>
       </div>
+      <b-modal
+        id="add-phone-num"
+        ref="modal"
+        title="Submit Your Name"
+        @show="clearAddPhoneNum"
+        @hidden="selectFirstPhoneNum"
+        @ok="addPhoneNum"
+      >
+        <b-form-group
+          label="Phone #:"
+          label-for="phone-input"
+        >
+          <b-form-input
+            id="phone-input"
+            v-model="newphone"
+            required
+          ></b-form-input>
+        </b-form-group>
+      </b-modal>
       <div v-if="signedin" id="main">
-        <b-form-radio-group buttons stacked id="phonenums" button-variant="outline-success" size="sm" style="flex-direction: column;">
+        <b-form-radio-group buttons stacked id="phonenums" button-variant="outline-success" size="sm" style="flex-direction: column;" v-model="selectednum">
           <b-form-radio v-for="number in numbers" v-bind:value="number" style="flex-grow: 0;">
             {{ (''+number).replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3') }}
           </b-form-radio>
-          <b-form-radio value="new" style="min-height: 0em; flex-grow: 0;">New Contact</b-form-radio>
+          <b-form-radio value="new" style="min-height: 0em; flex-grow: 0;" v-b-modal.add-phone-num id="add-phone-num-btn">New Contact</b-form-radio>
           <b-form-radio value="" style="min-height: 0em; flex-grow: 1;" disabled></b-form-radio>
         </b-form-radio-group>
         <input type="file" id="attachsend" style="display: none;">
         <b-card
           border-variant="primary"
-          header="Primary"
+          v-bind:header="selectednum == 'new' ? 'New Contact' : (''+selectednum).replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3')"
           header-bg-variant="primary"
           header-text-variant="white"
           align="center"
@@ -45,7 +64,7 @@
           no-body
         >
           <b-card-body id="messages">
-            <b-input-group style="flex: none; position: sticky;">
+            <b-input-group style="flex: none;">
               <b-form-input></b-form-input>
               <b-input-group-append>
                 <b-button variant="secondary" onclick="document.getElementById('attachsend').click();">Send File</b-button>
