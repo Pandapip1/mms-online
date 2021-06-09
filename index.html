@@ -18,37 +18,6 @@
   </head>
   <body>
     <div id="app">
-      <b-button variant="success" size="lg" style="position: absolute; bottom: 1em; right: .5em; z-index: 1;" v-b-modal.modal-sendmessage>+</b-button>
-      <b-modal id="modal-sendmessage" size="xl" title="Send A Message" ok-title="Send" ok-variant="success" hide-header-close>
-        <b-form-group
-          description="Phone Number"
-          label="To:"
-          label-for="phonenum-input"
-        >
-          <b-form-input id="phonenum-input" trim></b-form-input>
-        </b-form-group>
-        <b-form-group
-          description="The Message to Send"
-          label="Message:"
-          label-for="message"
-        >
-          <b-form-textarea
-            id="message"
-            rows="3"
-            max-rows="8"
-          ></b-form-textarea>
-        </b-form-group>
-        <b-form-group
-          label="Attachment:"
-          label-for="attachment"
-        >
-          <b-form-file
-            id="attachment"
-            placeholder="Choose a file or drop it here..."
-            drop-placeholder="Drop file here..."
-          ></b-form-file>
-        </b-form-group>
-      </b-modal>
       <div v-if="!signedin" id="signin">
         <b-card v-bind:bg-variant="darkmode ? 'dark' : 'light'" v-bind:text-variant="darkmode ? 'white' : 'black'" title="Sign In">
           <b-card-text>
@@ -62,6 +31,7 @@
           <b-form-radio v-for="number in numbers" v-bind:value="number" style="flex-grow: 0;">
             {{ (''+number).replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3') }}
           </b-form-radio>
+          <b-form-radio value="new" style="min-height: 0em; flex-grow: 0;">New Contact</b-form-radio>
           <b-form-radio value="" style="min-height: 0em; flex-grow: 1;" disabled></b-form-radio>
         </b-form-radio-group>
         <b-card
