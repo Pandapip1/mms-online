@@ -44,7 +44,7 @@ html, body, #app {
 }
 
 #messageareabody {
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 #messages {
