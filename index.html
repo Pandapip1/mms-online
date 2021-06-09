@@ -85,6 +85,10 @@
             </div>
           </div>
           <b-input-group class="mb-2">
+            <input type="file" id="attachsend" style="display: none;">
+            <b-input-group-prepend>
+              <b-button variant="outline-secondary" onclick="document.getElementById('attachsend').click();">Attach File</b-button>
+            </b-input-group-prepend>
             <b-form-input></b-form-input>
             <b-input-group-append>
               <b-form-file></b-form-file>
