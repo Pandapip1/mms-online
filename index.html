@@ -46,14 +46,14 @@
         </b-form-group>
       </b-modal>
       <div v-if="signedin" id="main">
-        <b-form-radio-group buttons stacked id="phonenums" button-variant="outline-success" size="sm" style="flex-direction: column;" v-model="selectednum">
-          <b-form-radio v-for="number in numbers" v-bind:value="number" style="flex-grow: 0;">
+        <b-form-radio-group buttons stacked id="phonenums" button-variant="outline-success" size="sm" v-model="selectednum">
+          <b-form-radio v-for="number in numbers" v-bind:value="number" class="inflexible">
             {{ (''+number).replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3') }}
           </b-form-radio>
-          <b-form-radio value="new" style="min-height: 0em; flex-grow: 0;" v-b-modal.add-phone-num id="add-phone-num-btn">New Contact</b-form-radio>
-          <b-form-radio value="" style="min-height: 0em; flex-grow: 1;" disabled></b-form-radio>
+          <b-form-radio value="new" class="inflexible" v-b-modal.add-phone-num id="add-phone-num-btn">New Contact</b-form-radio>
+          <b-form-radio value="" class="flexible" disabled></b-form-radio>
         </b-form-radio-group>
-        <input type="file" id="attachsend" style="display: none;">
+        <input type="file" id="attachsend" class="hidden">
         <b-card
           border-variant="primary"
           v-bind:header="selectednum == 'new' ? 'New Contact' : (''+selectednum).replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3')"
@@ -64,14 +64,14 @@
           no-body
         >
           <b-card-body id="messages">
-            <b-input-group style="flex: none;">
+            <b-input-group class="inflexible">
               <b-form-input></b-form-input>
               <b-input-group-append>
                 <b-button variant="secondary" onclick="document.getElementById('attachsend').click();">Send File</b-button>
                 <b-button variant="success">Send</b-button>
               </b-input-group-append>
             </b-input-group>
-            <div style="flex-grow: 1; flex-basis: 0em;"></div>
+            <div class="flexible"></div>
             <div v-bind:class="message.mine ? 'message my-message' : 'message their-message'" v-for='message in messages'>
               <b-card v-bind:bg-variant="message.mine ? 'primary' : 'light'" v-bind:text-variant="message.mine ? 'white' : 'black'">
                 {{ message.content }}
