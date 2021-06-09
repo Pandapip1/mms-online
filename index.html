@@ -42,30 +42,32 @@
           align="center"
           id="messagearea"
         >
-          <div id="messages" style="flex-grow: 1;">
-            <div class="message my-message">
-              <b-card bg-variant="primary" text-variant="white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-              </b-card>
+          <b-card-body id="messageareabody">
+            <div id="messages" style="flex-grow: 1;">
+              <div class="message my-message">
+                <b-card bg-variant="primary" text-variant="white">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                </b-card>
+              </div>
+              <div class="message their-message">
+                <b-card bg-variant="light" text-variant="black">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                </b-card>
+              </div>
             </div>
-            <div class="message their-message">
-              <b-card bg-variant="light" text-variant="black">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-              </b-card>
+            <div style="flex-grow: 0;">
+              <input type="file" id="attachsend" style="display: none;">
+              <b-input-group>
+                <b-input-group-prepend>
+                  <b-button variant="outline-secondary" onclick="document.getElementById('attachsend').click();">Attach File</b-button>
+                </b-input-group-prepend>
+                <b-form-input></b-form-input>
+                <b-input-group-append>
+                  <b-button variant="success">Send</b-button>
+                </b-input-group-append>
+              </b-input-group>
             </div>
-          </div>
-          <div style="flex-grow: 0;">
-            <input type="file" id="attachsend" style="display: none;">
-            <b-input-group>
-              <b-input-group-prepend>
-                <b-button variant="outline-secondary" onclick="document.getElementById('attachsend').click();">Attach File</b-button>
-              </b-input-group-prepend>
-              <b-form-input></b-form-input>
-              <b-input-group-append>
-                <b-button variant="success">Send</b-button>
-              </b-input-group-append>
-            </b-input-group>
-          </div>
+          </b-card-body>
         </b-card>
       </div>
     </div>
