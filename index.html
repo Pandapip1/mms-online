@@ -58,10 +58,11 @@
         </b-card>
       </div>
       <div v-if="signedin" id="main">
-        <b-form-radio-group buttons stacked id="phonenums" button-variant="outline-primary" size="lg">
-          <b-form-radio v-for="number in numbers" v-bind:value="number" style="min-height: 0em;">
+        <b-form-radio-group buttons stacked id="phonenums" button-variant="outline-primary" size="lg" style="flex-direction: column;">
+          <b-form-radio v-for="number in numbers" v-bind:value="number" style="flex-grow: 0; width: 0em;">
             {{ (''+number).replace(/\D+/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3') }}
           </b-form-radio>
+          <b-form-radio value="" style="min-height: 0em; flex-grow: 1; width: 0em;" disabled></b-form-radio>
         </b-form-radio-group>
         <b-card
           border-variant="primary"
