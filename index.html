@@ -54,18 +54,16 @@
               </b-card>
             </div>
           </div>
-          <div style="position:fixed; left: 0em; bottom: 1.5em; width: 100%;">
-            <input type="file" id="attachsend" style="display: none;">
-            <b-input-group>
-              <b-input-group-prepend>
-                <b-button variant="outline-secondary" onclick="document.getElementById('attachsend').click();">Attach File</b-button>
-              </b-input-group-prepend>
-              <b-form-input></b-form-input>
-              <b-input-group-append>
-                <b-button variant="success">Send</b-button>
-              </b-input-group-append>
-            </b-input-group>
-          </div>
+          <input type="file" id="attachsend" style="display: none;">
+          <b-input-group style="position:fixed; left: 0em; bottom: 1.5em;">
+            <b-input-group-prepend>
+              <b-button variant="outline-secondary" onclick="document.getElementById('attachsend').click();">Attach File</b-button>
+            </b-input-group-prepend>
+            <b-form-input></b-form-input>
+            <b-input-group-append>
+              <b-button variant="success">Send</b-button>
+            </b-input-group-append>
+          </b-input-group>
         </b-card>
       </div>
     </div>
