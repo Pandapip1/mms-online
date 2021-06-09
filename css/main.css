@@ -27,6 +27,7 @@ html, body, #app {
   white-space: nowrap;
   text-align: center;
   flex-grow: 1;
+  flex-direction: column;
 }
 
 #phonenums * {
@@ -73,4 +74,18 @@ html, body, #app {
 .their-message {
   text-align: left !important;
   padding-left: 1em !important;
+}
+
+.inflexible {
+  min-height: 0em;
+  flex-grow: 0;
+}
+
+.flexible {
+  min-height: 0em;
+  flex-grow: 1;
+}
+
+.hidden {
+  display: none;
 }
